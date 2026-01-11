@@ -34,6 +34,8 @@ namespace med_way
 
             app.UseAuthorization();
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.MapControllers();
 
