@@ -1,0 +1,6 @@
+@med_way_HostAddress = http://localhost:5268
+
+GET {{med_way_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
