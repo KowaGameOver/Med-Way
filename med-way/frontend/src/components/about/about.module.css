@@ -1,0 +1,26 @@
+.about
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: clamp(2rem, 5vh, 4rem) 0;
+}
+
+.aboutTitle
+{
+    font-size: clamp(2rem, 2.5vw, 3.5rem);
+    font-weight: 600;
+    margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+.aboutContent
+{
+    max-width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2rem);
+}

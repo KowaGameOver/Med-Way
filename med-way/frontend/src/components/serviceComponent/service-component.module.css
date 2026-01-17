@@ -1,0 +1,41 @@
+.serviceComponent
+{
+    box-sizing: border-box;
+    width: clamp(23rem, 30vw, 45rem);
+    height: clamp(10rem, 19vh, 30rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+
+    position: relative;
+    padding: clamp(1rem, 1vw, 1.5rem);
+}
+
+.serviceComponent:hover
+{
+    box-shadow: 0px 4px 6px 1px var(--primary-color-shadow);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.serviceTitle
+{
+    font-size: clamp(1.125rem, 1.5vw, 2rem);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.serviceDescription
+{
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    color: #555555;
+}

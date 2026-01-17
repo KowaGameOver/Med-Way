@@ -1,0 +1,25 @@
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: #FFFFFF;
+    
+    height: 6rem;
+    padding: 1.5rem;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.title
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 1.875rem);
+    color: var(--primary-color);
+}

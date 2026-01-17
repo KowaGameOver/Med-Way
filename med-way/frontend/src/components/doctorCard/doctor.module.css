@@ -1,0 +1,56 @@
+.doctorCard
+{
+    width: 75%;
+    height: clamp(18rem, 37vh, 25rem);
+
+    background-color: #FFFFFF;
+    border-radius: 20px;
+
+    padding: clamp(1rem, 1.5vw, 2rem);
+
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    box-shadow: 0px 6px 12px 2px rgba(0, 0, 0, 0.4);
+}
+
+.doctorPhoto
+{
+    width: 25%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.doctorInfo
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.doctorName
+{
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.doctorDescription
+{
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
+    color: #555555;
+}
+
+@media (max-width: 768px) {
+    .doctorCard {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: clamp(25rem, 80vh, 55rem);
+    }
+    .doctorPhoto {
+        width: 100%;
+    }
+}
