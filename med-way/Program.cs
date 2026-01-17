@@ -9,13 +9,6 @@ namespace med_way
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            var port = int.Parse(Environment.GetEnvironmentVariable("PORT")!);
-
-            builder.WebHost.ConfigureKestrel(options =>
-            {
-                options.ListenAnyIP(port);
-            });
-
             // Add services to the container.
 
             builder.Services.AddControllers();
