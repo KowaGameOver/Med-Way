@@ -34,10 +34,15 @@ namespace med_way
 
             app.UseAuthorization();
 
-            app.UseDefaultFiles();
+            //app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.MapControllers();
+
+            AppDomain.CurrentDomain.UnhandledException += (s, e) =>
+            {
+                Console.WriteLine("UNHANDLED: " + e.ExceptionObject);
+            };
 
             app.Run();
         }
