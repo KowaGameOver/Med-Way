@@ -8,42 +8,11 @@ namespace med_way
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-            builder.Services.AddSingleton<TelegramService>();
-            builder.Services.AddHostedService<TelegramUpdateService>();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            //if (app.Environment.IsDevelopment())
-            //{
-            //    app.UseSwagger();
-            //    app.UseSwaggerUI();
-            //}
-
-            app.UseSwagger();
-            app.UseSwaggerUI();
-
-            //app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-            //app.UseDefaultFiles();
-            app.UseStaticFiles();
-
-            app.MapControllers();
-
-            app.MapGet("/", async context =>
-            {
-                context.Response.ContentType = "text/html";
-                await context.Response.SendFileAsync("wwwroot/index.html");
-            });
+            app.MapGet("/", () => "OK");
 
             app.Run();
         }
