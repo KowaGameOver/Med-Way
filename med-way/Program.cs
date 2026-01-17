@@ -16,7 +16,7 @@ namespace med_way
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<TelegramService>();
-            builder.Services.AddHostedService<TelegramUpdateService>();
+            //builder.Services.AddHostedService<TelegramUpdateService>();
 
             var app = builder.Build();
 
