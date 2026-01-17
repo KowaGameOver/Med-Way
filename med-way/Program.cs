@@ -39,10 +39,11 @@ namespace med_way
 
             app.MapControllers();
 
-            AppDomain.CurrentDomain.UnhandledException += (s, e) =>
+            app.MapGet("/", async context =>
             {
-                Console.WriteLine("UNHANDLED: " + e.ExceptionObject);
-            };
+                context.Response.ContentType = "text/html";
+                await context.Response.SendFileAsync("wwwroot/index.html");
+            });
 
             app.Run();
         }
