@@ -9,6 +9,16 @@ namespace med_way
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            var port = Environment.GetEnvironmentVariable("PORT");
+
+            if (!string.IsNullOrEmpty(port))
+            {
+                builder.WebHost.ConfigureKestrel(options =>
+                {
+                    options.ListenAnyIP(int.Parse(port));
+                });
+            }
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -16,7 +26,7 @@ namespace med_way
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<TelegramService>();
-            //builder.Services.AddHostedService<TelegramUpdateService>();
+            builder.Services.AddHostedService<TelegramUpdateService>();
 
             var app = builder.Build();
 
