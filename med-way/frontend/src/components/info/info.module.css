@@ -1,0 +1,131 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.title {
+    width: 75%;
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    margin-top: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.card {
+    width: min(75%, 1100px);
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: clamp(1.5rem, 2vw, 2.5rem);
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+
+    box-shadow: 0px 2px 16px 2px rgba(0, 0, 0, 0.4);
+}
+
+.text {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
+    color: #555555;
+    line-height: 1.6;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.label {
+  font-size: clamp(1.2rem, 1.8vw, 2rem);
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.phones {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.phone {
+    padding: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+    border-radius: 15px;
+
+    font-size: clamp(0.95rem, 1.2vw, 1.3rem);
+    font-weight: 600;
+
+    color: var(--primary-color);
+    background-color: #f2f6ff;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.phone:hover {
+    background-color: #e0ebff;
+    transform: translateY(-1px);
+}
+
+.socials {
+    display: flex;
+    justify-content: center; 
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: clamp(1rem, 2vw, 2rem);
+}
+
+.socialBtn {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+
+    padding: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+    border-radius: 15px;
+
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    font-weight: 600;
+
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.socialBtn:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-1px);
+}
+
+.socialIcon {
+    width: clamp(20px, 2vw, 28px);
+    height: clamp(20px, 2vw, 28px);
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .title {
+        width: 95%;
+        text-align: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .phones {
+        flex-direction: column;
+    }
+
+    .socials {
+        flex-direction: column;
+    }
+}
