@@ -43,7 +43,7 @@ export default function About() {
     ];
 
     return (
-        <section className={styles.about}>
+        <section id = "services" className={styles.about}>
             <h2 className={styles.aboutTitle}>Професійні послуги</h2>
             <div className={styles.aboutContent}>
                 {

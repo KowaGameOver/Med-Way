@@ -7,12 +7,22 @@ export default function Navbar() {
 
   const [isVisible, setIsVisible] = useState(true);
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsVisible(window.innerWidth > 768);
     };
 
-    handleResize(); // сразу при маунте
+    handleResize(); 
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -24,11 +34,28 @@ export default function Navbar() {
     return null;
   }
 
-  return (
-    <nav className={styles.navbar} ref={ref}>
-        <p className={styles.option}>Про нас</p>
-        <p className={styles.option}>Наші лікарі</p>
-        <p className={styles.option}>Контакти</p>
-    </nav>
-  );
+return (
+  <nav className={styles.navbar} ref={ref}>
+    <p
+      className={styles.option}
+      onClick={() => scrollToSection("contacts")}
+    >
+      Контакти
+    </p>
+
+    <p
+      className={styles.option}
+      onClick={() => scrollToSection("services")}
+    >
+      Послуги
+    </p>
+
+    <p
+      className={styles.option}
+      onClick={() => scrollToSection("doctors")}
+    >
+      Наші лікарі
+    </p>
+  </nav>
+);
 }

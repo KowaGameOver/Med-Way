@@ -27,7 +27,7 @@ export default function Doctors() {
     ];
 
     return (
-        <section className={styles.doctors}>
+        <section id = "doctors" className={styles.doctors}>
             <h2 className={styles.doctorsTitle}>Наші лікарі</h2>
             <div className={styles.doctorsContent}>
                 {

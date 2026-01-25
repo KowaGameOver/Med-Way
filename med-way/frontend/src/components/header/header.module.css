@@ -22,4 +22,6 @@
     font-weight: 700;
     font-size: clamp(1.5rem, 2vw, 1.875rem);
     color: var(--primary-color);
+    cursor: pointer;
+    user-select: none;
 }

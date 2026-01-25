@@ -2,9 +2,10 @@
 {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(16px, 2vw, 32px);
     font-size: 1.25rem;
     font-weight: 500;
+    flex-wrap: wrap; 
 }
 
 .option:hover
@@ -13,4 +14,11 @@
     cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
+    white-space: nowrap; 
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    display: none;
+  }
 }

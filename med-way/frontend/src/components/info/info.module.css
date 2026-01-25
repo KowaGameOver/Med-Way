@@ -49,13 +49,17 @@
 }
 
 .phones {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     gap: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
 .phone {
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    width: min(100%, 520px); 
     padding: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
     border-radius: 15px;
 
@@ -67,6 +71,10 @@
     text-decoration: none;
 
     transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.phone:active {
+  transform: translateY(1px);
 }
 
 .phone:hover {
@@ -109,6 +117,34 @@
     width: clamp(20px, 2vw, 28px);
     height: clamp(20px, 2vw, 28px);
     object-fit: contain;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+
+  transform: translateX(-50%) translateY(12px);
+  opacity: 0;
+
+  background: rgba(20, 20, 20, 0.92);
+  color: #fff;
+
+  padding: 10px 16px;
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.toastShow {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 @media (max-width: 768px) {

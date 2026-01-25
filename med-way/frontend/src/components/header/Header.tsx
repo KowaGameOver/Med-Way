@@ -4,19 +4,25 @@ import Navbar from '../navbar/Navbar';
 import styles from './header.module.css';
 
 export default function Header() {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <header className={styles.header}>
-      <div className={styles.title}>
+      <div className={styles.title}
+          role="button"
+          tabIndex={0}
+          onClick={scrollTop}>
         <Logo/>
         <span>MedWay</span>
       </div>
       <Navbar />
-      <Button
+      {/* <Button
             label="Записатися"
             onClick={() => {
             alert('Запис на прийом');}}
             variant='primary'
-        />
+        /> */}
     </header>
   );
 }
